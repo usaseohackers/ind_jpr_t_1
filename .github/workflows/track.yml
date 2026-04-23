@@ -1,1 +1,11 @@
+name: Traffic Tracker
+on:
+  repository_dispatch:
+    types: [v_*] # Hamare code se 'v_dd_mm' type ka event aayega
 
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log Visit
+        run: echo "Visit received from WordPress site"
